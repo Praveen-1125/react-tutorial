@@ -1,0 +1,17 @@
+function App() {
+const name = "Praveen";
+
+ function handleNameChange(){
+  const names = ["Earn", "Grow", "Give"];
+  const int = Math.floor(Math.random()*3);
+  return names[int]
+ }
+  return (
+    <div>
+      <h1>React Developer {name} </h1>
+        <h2>Let's {handleNameChange()} Money</h2>
+    </div>
+  );
+}
+
+export default App;
