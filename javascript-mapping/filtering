@@ -1,0 +1,18 @@
+import React from 'react'
+import { useState } from 'react';
+
+const Content = () => {
+
+// This is filtering
+  const numbers = [-2,-1,0,1,2]
+  const itemss = numbers.filter(n => n>=0)
+  console.log(itemss)
+
+  return (
+    <main>
+
+    </main>
+  )
+}
+
+export default Content
