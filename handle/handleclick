@@ -1,0 +1,27 @@
+import React from 'react'
+import { useState } from 'react';
+
+const Content = () => {
+    function handleNameChange(){
+        const names = ["Earn", "Grow", "Give"];
+        const int = Math.floor(Math.random()*3);
+        return names[int]
+       }
+    const handleClick  = (e) => {
+      console.log(e.target.innerText)
+    }
+    const handleClick2  = (name) => {
+      console.log(`Thanks for the Support ${name}`)
+    }
+
+  return (
+    <main>
+    <h2>Let's {handleNameChange()} Money</h2>
+    <button onClick={(e) => handleClick(e)}>Subscribe</button>
+    </main>
+  )
+}
+
+export default Content
+
+//It is the Handling the click, button, etc.,
