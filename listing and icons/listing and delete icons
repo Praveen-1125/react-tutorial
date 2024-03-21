@@ -1,0 +1,45 @@
+import React from 'react'
+import { useState } from 'react';
+// react-icons https://www.npmjs.com/package/react-icons
+import { FaTrashAlt } from "react-icons/fa";
+
+const Content = () => {
+  const [items, setItems] = useState(
+    [
+      { id:1,
+        checked: true,
+        item: "Practise Coding"
+      },
+      { id:2,
+        checked: false,
+        item: "Play Cricket"
+      },      
+      { id:3,
+        checked: false,
+        item: "Read about AI"
+      }
+  ]);
+
+//Listing the items using mapping
+
+  return (
+    <main>
+      <ul>
+        {items.map((item) => (
+          <li className='item' key={item.id} >
+            <input
+              type ='checkbox'
+              checked = {item.checked}
+          />
+          <label>{item.item}</label>
+          <FaTrashAlt />
+
+          </li>
+        ))}
+      </ul>
+
+    </main>
+  )
+}
+
+export default Content
